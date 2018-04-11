@@ -57,7 +57,7 @@
 				100%{transform:rotate(360deg);}
 			}
 
-			::-webkit-scrollbar{width: 10px;height: 10px;}
+			::-webkit-scrollbar{width: 5px;height: 10px;}
 			::-webkit-scrollbar-track{background: 0 0;}
 			::-webkit-scrollbar-track-piece{background:#fff;}
 			::-webkit-scrollbar-thumb{background-color: #ccc; border-radius: 5px;}
@@ -285,6 +285,19 @@
 		<script src="resource/js/jquery-1.10.2.min.js"></script>
 		<script>
 			$(function(){
+				
+				lanreisze();
+				$(window).resize(lanreisze);
+				//设置左边栏的高度
+				function lanreisze(){
+					//窗口的高度
+					var widheight = $(window).height();
+					//顶部栏的高度
+					var navheight = $(".slitop").height();
+					$(".itemMenu").height(widheight-navheight);
+				}
+
+
 				var close = true;
 				$(".slider ul li.items .title").click(function(){
 					$(this).parent().next().slideToggle("fast"); //点击的找到父级的下一个
