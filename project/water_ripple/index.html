@@ -58,8 +58,8 @@
 
 				//on click
 				document.getElementById( 'holder' ).addEventListener( 'click', function( e ) {
-					var mouseX = e.layerX;
-					var mouseY = e.layerY;
+					var mouseX = e.offsetX;
+					var mouseY = e.offsetY;
 					waterRippleEffect.disturb( mouseX, mouseY );
 
 				} );
@@ -67,8 +67,8 @@
 
 				//on mousemove
 				document.getElementById( 'holder' ).addEventListener( 'mousemove', function( e ) {
-					var mouseX = e.layerX;
-					var mouseY = e.layerY;
+					var mouseX = e.offsetX;
+					var mouseY = e.offsetY;
 					waterRippleEffect.disturb( mouseX, mouseY );
 
 				} );
